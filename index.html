@@ -30,17 +30,53 @@ html {
 
 body { 
   font-family: IRANSans;
+  text-align-last: center;
 }
 
+.search__input {
+    width: 80%;
+    padding: 12px 24px;
+    background-color: transparent;
+    transition: transform 250ms ease-in-out;
+    font-size: 14px;
+    line-height: 18px;
+    color: #575756;
+    background-color: transparent;
+    
+    border-radius: 50px;
+    border: 1px solid #575756;
+    transition: all 250ms ease-in-out;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    font-family: IRANSans;
+}
+button {
+    background-color: #0a0a23;
+    color: #fff;
+    border: none;
+    border-radius: 27px;
+    padding: 10px 54px;
+    margin-top: 2rem;
+    font-family: IRANSans;
+  }
+  .totdiv{
+    margin-top: 9rem;
+  }
+  #id{
+    margin-top: 2rem;
+  }
 </style>
 </head>
 <body>
+<div class="totdiv">
+    <div class="search__container">
+        <p class="search__title">لطفا لینک کانکشن قبلی خود را وارد کنید</p>
+        <input class="search__input" type="text" placeholder="آدرس کانکشن قبلی" id="myText">
+    </div>
+    <button onclick="myFunction()">دریافت کانکشن جدید</button>
+    <p id="demo"></p>
 
-<h1>کد رو بزن این پایین</h1>
-<p>This is a test.</p>
-<input type="text" id="myText" value="">
-<button onclick="myFunction()">Try it</button>
-<p id="demo"></p>
+</div>
 
 <script>
     function myFunction() {
