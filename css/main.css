@@ -1,0 +1,28 @@
+@font-face {
+  font-family: IRANSans;
+  src: url(../fonts/IRANSansWeb.woff2) format("woff2");
+  font-style: bold;
+  font-weight: 400;
+  font-display: swap;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: #030303;
+}
+
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+body { 
+  font-family: IRANSans;
+}
