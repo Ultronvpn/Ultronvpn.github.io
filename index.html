@@ -1,1 +1,22 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ultron Vpn</title>
+</head>
+<body>
+
+<h1>کد رو بزن این پایین</h1>
+<p>This is a test.</p>
+<input type="text" id="myText" value="">
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myText").value;
+      var tst = x.replace(x.substring(x.indexOf("@")+1, x.indexOf("?type")),'95.179.217.101:20001')
+      document.getElementById("demo").innerHTML = tst;
+    }
+    </script>
+</body>
+</html>
