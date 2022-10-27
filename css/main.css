@@ -1,6 +1,6 @@
 @font-face {
   font-family: IRANSans;
-  src: url(../fonts/IRANSansWeb.woff2) format("woff2");
+  src: url("https://github.com/Ultronvpn/Ultronvpn.github.io/blob/main/fonts/IRANSansWeb.woff2?raw=true") format("woff2");
   font-style: bold;
   font-weight: 400;
   font-display: swap;
