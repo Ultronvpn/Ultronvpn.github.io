@@ -75,6 +75,7 @@ button {
     margin-top: 2rem;
     font-family: IRANSans;
     cursor: pointer;
+    font-size: 1rem;
   }
   .totdiv{
     margin-top: 9rem;
@@ -91,7 +92,7 @@ button {
         <input class="search__input" type="text" placeholder="آدرس کانکشن قبلی" id="myText">
     </div>
     <button onclick="myFunction()">دریافت کانکشن جدید</button>
-    <div style="text-align: -webkit-center; margin-top: 3rem;" onclick="myFunction()"><p style="color:white;max-width: 63%;" id="demo"></p></div>
+    <div style="text-align: -webkit-center; margin-top: 3rem;"><p style="color:white;max-width: 63%;" id="demo"></p></div>
 
 </div>
 
@@ -101,8 +102,8 @@ button {
       var tst = x.replace(x.substring(x.indexOf("@")+1, x.indexOf(":2")),'95.179.217.101')
       var tst = tst.replace(tst.substring(tst.indexOf("main.com")+8,tst.length ),'#' + tst.substring(tst.indexOf("host=a")+6,tst.indexOf(".why")))
       document.getElementById("demo").innerHTML = tst;
-      navigator.clipboard.writeText(tst);
-      alert("کانکشن جدید با موفقیت کپی شد.");
+      // navigator.clipboard.writeText(tst);
+      alert("کانکشن جدید زیر را به صورت کامل کپی کرده و در برنامه قرار دهید.");
     }
   </script>
 </body>
