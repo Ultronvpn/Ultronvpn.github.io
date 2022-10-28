@@ -27,10 +27,20 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-
+.search__title{
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
 body { 
   font-family: IRANSans;
   text-align-last: center;
+  background: #2575fc;
+    background: -webkit-linear-gradient(left,#6a11cb,#2575fc);
+    background: -o-linear-gradient(left,#6a11cb,#2575fc);
+    background: -moz-linear-gradient(left,#6a11cb,#2575fc);
+    background: linear-gradient(left,#6a11cb,#2575fc);
+    overflow: hidden;
 }
 
 .search__input {
@@ -40,15 +50,21 @@ body {
     transition: transform 250ms ease-in-out;
     font-size: 14px;
     line-height: 18px;
-    color: #575756;
+    color: #ffffff;
     background-color: transparent;
     
     border-radius: 50px;
-    border: 1px solid #575756;
+    border: 1px solid #ffffff;
     transition: all 250ms ease-in-out;
     backface-visibility: hidden;
     transform-style: preserve-3d;
     font-family: IRANSans;
+}
+::-webkit-input-placeholder {
+    color: rgb(221, 221, 221);
+}
+input:focus-visible {
+    outline-offset: unset;
 }
 button {
     background-color: #0a0a23;
@@ -58,6 +74,7 @@ button {
     padding: 10px 54px;
     margin-top: 2rem;
     font-family: IRANSans;
+    cursor: pointer;
   }
   .totdiv{
     margin-top: 9rem;
@@ -70,20 +87,23 @@ button {
 <body>
 <div class="totdiv">
     <div class="search__container">
-        <p class="search__title">لطفا لینک کانکشن قبلی خود را وارد کنید</p>
+        <p class="search__title">لطفا لینک کانکشن قبلی خود را به صورت کامل وارد کنید</p>
         <input class="search__input" type="text" placeholder="آدرس کانکشن قبلی" id="myText">
     </div>
     <button onclick="myFunction()">دریافت کانکشن جدید</button>
-    <p id="demo"></p>
+    <div style="text-align: -webkit-center; margin-top: 3rem;" onclick="myFunction()"><p style="color:white;max-width: 63%;" id="demo"></p></div>
 
 </div>
 
 <script>
     function myFunction() {
       var x = document.getElementById("myText").value;
-      var tst = x.replace(x.substring(x.indexOf("@")+1, x.indexOf("?type")),'95.179.217.101:20001')
+      var tst = x.replace(x.substring(x.indexOf("@")+1, x.indexOf(":2")),'95.179.217.101')
+      var tst = tst.replace(tst.substring(tst.indexOf("main.com")+8,tst.length ),'#' + tst.substring(tst.indexOf("host=a")+6,tst.indexOf(".why")))
       document.getElementById("demo").innerHTML = tst;
+      navigator.clipboard.writeText(tst);
+      alert("کانکشن جدید با موفقیت کپی شد.");
     }
-    </script>
+  </script>
 </body>
 </html>
