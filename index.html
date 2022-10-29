@@ -92,15 +92,14 @@ button {
         <input class="search__input" type="text" placeholder="آدرس کانکشن قبلی" id="myText">
     </div>
     <button onclick="myFunction()">دریافت کانکشن جدید</button>
-    <div style="text-align: -webkit-center; margin-top: 3rem;"><p contenteditable style="color:white;max-width: 63%;" id="demo"></p></div>
+    <div style="text-align: -webkit-center;text-align: center; margin-top: 3rem;"><p contenteditable style="color:white;max-width: 63%;" id="demo"></p></div>
 
 </div>
 
 <script>
     function myFunction() {
       var x = document.getElementById("myText").value;
-      var tst = x.replace(x.substring(x.indexOf("@")+1, x.indexOf(":2")),'95.179.217.101')
-      var tst = tst.replace(tst.substring(tst.indexOf("main.com")+8,tst.length ),'#' + tst.substring(tst.indexOf("host=a")+6,tst.indexOf(".why")))
+      var tst = x.replace(x.substring(x.indexOf("@")+1, x.indexOf("?")),'95.179.217.101:'+(20000+Number(tst.substring(tst.indexOf("host=a")+6,tst.indexOf(".why")))))
       document.getElementById("demo").innerHTML = tst;
       // navigator.clipboard.writeText(tst);
       alert("کانکشن جدید زیر را به صورت کامل کپی کرده و در برنامه قرار دهید.");
