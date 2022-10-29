@@ -99,7 +99,7 @@ button {
 <script>
     function myFunction() {
       var x = document.getElementById("myText").value;
-      var tst = x.replace(x.substring(x.indexOf("@")+1, x.indexOf("?")),'95.179.217.101:'+(20000+Number(tst.substring(tst.indexOf("host=a")+6,tst.indexOf(".why")))))
+      var tst = x.replace(x.substring(x.indexOf("@")+1, x.indexOf("?")),'95.179.217.101:'+(20000+Number(x.substring(x.indexOf("host=a")+6,x.indexOf(".why")))))
       document.getElementById("demo").innerHTML = tst;
       // navigator.clipboard.writeText(tst);
       alert("کانکشن جدید زیر را به صورت کامل کپی کرده و در برنامه قرار دهید.");
